@@ -1,0 +1,107 @@
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  padding: 20px;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cert-header {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.logo_img {
+  margin: 8px 0;
+  width: auto;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.cert-body {
+  margin-top: 10px;
+}
+
+.cert-body-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 8px 0;
+}
+
+.cert-body-subtitle {
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Overlay Effect */
+.content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.content .content-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.content:hover .content-overlay {
+  opacity: 1;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.content:hover .content-details {
+  opacity: 1;
+}
+
+.content-details h3 {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cert-card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .cert-body-title {
+    font-size: 18px;
+  }
+
+  .cert-body-subtitle {
+    font-size: 14px;
+  }
+}
